@@ -2,11 +2,11 @@
 <div class="container center">
   <form class="example-form">
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="Search..." [(ngModel)]="searcTerm" name="search" type="text" autofocus>  
+      <input matInput placeholder="Search..." [(ngModel)]="searchTerm" name="search" type="text" autofocus>  
     </mat-form-field>
     <mat-icon>search</mat-icon>
   </form>
-  <mat-list role="list" *ngFor="let place of places | filter:searcTerm">
+  <mat-list role="list" *ngFor="let place of places | filter:searchTerm">
     <mat-list-item role="listitem">{{ place.name }}, Code: {{ place.code }}</mat-list-item>
     <mat-divider></mat-divider>
   </mat-list>
